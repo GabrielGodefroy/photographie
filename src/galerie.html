@@ -7,9 +7,12 @@
 .mySlides1, .mySlides2 {display: none}
 img {vertical-align: middle;}
 
+h1,h2 {
+    text-align:center
+}
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1200px;
   position: relative;
   margin: auto;
 }
@@ -28,6 +31,8 @@ img {vertical-align: middle;}
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: #e6e6e6;
+  opacity:0.3
 }
 
 /* Position the "next button" to the right */
@@ -48,17 +53,18 @@ img {vertical-align: middle;}
 }
 
 /* On hover, add a grey background color */
-.prev:hover, .next:hover, .bottom:hover {
+.prev:hover, .next:hover, .bottom:hover, .top:hover {
   background-color: #f1f1f1;
   color: black;
+  opacity:0.9
 }
 </style>
 </head>
 <body>
 
-<h1 style="text-align:center"> Galerie photo</h1>
+<h1> Galerie photo</h1>
 
-<h2 style="text-align:center">Paysages Écossais</h2>
+<h2> <a id="slideshow1"></a> Paysages Écossais</h2>
 
 <div class="slideshow-container">
   <div class="mySlides1">
@@ -80,14 +86,13 @@ img {vertical-align: middle;}
 
   <a class="prev" onclick="plusSlides(-1, 0)">&#9668;</a>
   <a class="next" onclick="plusSlides(1, 0)">&#9654;</a>
-  <a class="bottom" onclick="plusSlides(1, 0)">&#9660;</a>
-  <a class="top" onclick="plusSlides(-1, 0)">&#9650;</a>
+  <a class="bottom" href="#slideshow2">&#9660;</a>
 </div>
 
-<p>Slideshow 2:</p>
+<h2><a id="slideshow2"></a> Slideshow 2:</h2>
 <div class="slideshow-container">
   <div class="mySlides2">
-    <img src="DSC_0312_01.jpg" style="width:100%">
+    <img src="photo/landscape/rDSC_0655.jpg" style="width:100%">
   </div>
 
   <div class="mySlides2">
@@ -100,8 +105,7 @@ img {vertical-align: middle;}
 
   <a class="prev" onclick="plusSlides(-1, 1)">&#9668;</a>
   <a class="next" onclick="plusSlides(1, 1)">&#9654;</a>
-  <a class="bottom" onclick="plusSlides(1, 1)">&#9660;</a>
-  <a class="top" onclick="plusSlides(-1, 0)">&#9650;</a>
+  <a class="top" href="#slideshow1">&#9650;</a>
 </div>
 
 <script>
