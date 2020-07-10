@@ -13,16 +13,20 @@ body, html {
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
+  background-color: #fafafa;
+  overflow-x: hidden; //horizontal
+
 }
 
 h1 {
-    text-align:center
+    text-align:center;
+    margin: 0;
 }
 
 h2 {
-    text-align:left;
+    text-align:center;
     position:relative;
-    left: 25%;
+    margin: 3px ;
 }
 /* Slideshow container */
 .slideshow-container {
@@ -67,11 +71,6 @@ h2 {
 }
 
 
-.home {
-    top:05%;
-    position: center;
-    opacity:1.0
-}
 
 
 /* On hover, add a grey background color */
@@ -86,9 +85,9 @@ h2 {
 </head>
 <body>
 
-<a class="home" href="../index.html" style="font-size: 40px; opacity:0.3;right:2%; top:2%; text-decoration: none; color:darkolivegreen; position: fixed;" > &#127968; <font size="2"> Homepage </font> </a>
+<a class="home" href="../index.html" style="z-index: 1; position:fixed; font-size: 32px; opacity:0.5;left:4%; top:4%; text-decoration: none; color:darkolivegreen; " > &#127968; </a>
     
-<h1> GALERIE PHOTO</h1>
+<h1> GALERIE</h1>
 <h2> <a id="slideshow1"></a> Paysages Écossais</h2>
 
 <div class="slideshow-container">
@@ -114,7 +113,7 @@ h2 {
   <a class="bottom" href="#slideshow2">&#9660;</a>
 </div>
 
-<h2><a id="slideshow2"></a> Slideshow 2:</h2>
+<h2><a id="slideshow2"></a> Faune et Flore</h2>
 <div class="slideshow-container">
   <div class="mySlides2">
     <img src="photo/landscape/rDSC_0655.jpg" style="width:100%">
