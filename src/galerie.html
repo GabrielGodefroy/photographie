@@ -8,8 +8,21 @@
 .mySlides1, .mySlides2 {display: none}
 img {vertical-align: middle;}
 
-h1,h2 {
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+h1 {
     text-align:center
+}
+
+h2 {
+    text-align:left;
+    position:relative;
+    left: 25%;
 }
 /* Slideshow container */
 .slideshow-container {
@@ -73,12 +86,9 @@ h1,h2 {
 </head>
 <body>
 
-<a class="home" href="../index.html" style="float: right;font-size: 12px; text-decoration: none; color:darkolivegreen">Homepage </a>
-<a class="home" href="../index.html" style="font-size: 40px; float: right;text-decoration: none; color:darkolivegreen">&#127968; </a>
+<a class="home" href="../index.html" style="font-size: 40px; opacity:0.3;right:2%; top:2%; text-decoration: none; color:darkolivegreen; position: fixed;" > &#127968; <font size="2"> Homepage </font> </a>
     
-<h1> Galerie photo</h1>
-    
-
+<h1> GALERIE PHOTO</h1>
 <h2> <a id="slideshow1"></a> Paysages Écossais</h2>
 
 <div class="slideshow-container">
@@ -111,11 +121,7 @@ h1,h2 {
   </div>
 
   <div class="mySlides2">
-    <img src="DSC_0229.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides2">
-    <img src="DSC_0284.jpg" style="width:100%">
+    <img src="photo/landscape/rDSC_0336.jpg" style="width:100%">
   </div>
 
   <a class="prev" onclick="plusSlides(-1, 1)">&#9668;</a>
