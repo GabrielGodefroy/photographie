@@ -31,6 +31,16 @@ table {
   color: #000;
 }
 
+.caption .border {
+
+  background-color: #2168;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 15px;
+}
+
+
 .caption .description {
   background-color: #6666CC99;
   color: #fff;
@@ -59,14 +69,6 @@ table {
   max-width: 800px
 }
 
-
-.caption .border {
-  background-color: #2168;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 15px;
-}
 
 
 
