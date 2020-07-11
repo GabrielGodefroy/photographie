@@ -5,7 +5,7 @@ body, html {
   color: #777;
 }
 
-.bg {
+.background {
   /* The image used */
   background-image: url("DSC_0661.JPEG");
 
@@ -18,12 +18,9 @@ body, html {
   background-size: cover;
 }
 
-table {
-  border-spacing: 10pt 10pt;
-  border-collapse: separate;
-}
 
-.caption {
+
+.maincontent {
   position: relative;
   top: 10%;
   width: 100%;
@@ -31,8 +28,7 @@ table {
   color: #000;
 }
 
-.caption .border {
-
+.maincontent .windowwitdth {
   background-color: #2168;
   color: #fff;
   padding: 18px;
@@ -40,8 +36,16 @@ table {
   letter-spacing: 15px;
 }
 
+.maincontent .container {
+  max-width: 800px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center
+  border: 2px solid black;
+  
+}
 
-.caption .description {
+.maincontent .description {
   background-color: #6666CC99;
   color: #fff;
   padding: 18px;
@@ -61,15 +65,10 @@ table {
 
 }
 
-.caption .container {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center
-  border: 2px solid black;
-  max-width: 800px
+.maincontent table {
+  border-spacing: 10pt 10pt;
+  border-collapse: separate;
 }
-
-
 
 
 

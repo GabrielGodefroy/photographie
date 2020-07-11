@@ -3,98 +3,17 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-* {box-sizing: border-box}
-.mySlides1, .mySlides2 {display: none}
-img {vertical-align: middle;}
+<link rel="stylesheet" href="galerie.css">
 
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
-  background-color: #fafafa;
-  overflow-x: hidden; //horizontal
-
-}
-
-h1 {
-    text-align:center;
-    margin: 0;
-}
-
-h2 {
-    text-align:center;
-    position:relative;
-    margin: 3px ;
-
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1100px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next, .bottom, .top {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  background-color: #e6e6e6;
-  opacity:0.3
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-}
-
-.bottom {
-    right: 50%;
-    top:95%;
-    position: center;
-}
-
-.top {
-    right:50%;
-    top:05%;
-    position: center;
-}
-
-img {
-    width:100%
-}
-
-
-/* On hover, add a grey background color */
-.prev:hover, .next:hover, .bottom:hover, .top:hover,.home:hover {
-  background-color: #f1f1f1;
-  color: black;
-  opacity:0.9
-}
-
-
-</style>
 </head>
 <body>
 
-<a class="home" href="../index.html" style="z-index: 1; position:fixed; font-size: 32px; opacity:0.5;left:4%; top:4%; text-decoration: none; color:darkolivegreen; " > &#127968; </a>
+<a class="home" href="../index.html" style="z-index: 1; position:fixed; font-size: 32px; opacity:0.3;left:4%; top:4%; text-decoration: none; color:darkolivegreen; max-width:30px; " > <img src="homepage.png"> </a>
     
 <h1> GALERIE</h1>
 <h2> <a id="slideshow1"></a> Paysages Écossais</h2>
 
-<div class="slideshow-container">
+<div class="slideshowContainer">
   <div class="mySlides1">
     <img src="photo/scot/DSC_0312_01.JPEG">
   </div>
@@ -118,11 +37,11 @@ img {
   
   <a class="prev" onclick="plusSlides(-1, 0)">&#9668;</a>
   <a class="next" onclick="plusSlides(1, 0)">&#9654;</a>
-  <a class="bottom" href="#slideshow2">&#9660;</a>
+  <!-- <a class="bottom" href="#slideshow2">&#9660;</a> -->
 </div>
 
 <h2><a id="slideshow2"></a> Faune et Flore</h2>
-<div class="slideshow-container">
+<div class="slideshowContainer">
 
   <div class="mySlides2"> <img src="photo/wildlife/DSC_0469.JPEG"> </div>
   <div class="mySlides2"> <img src="photo/wildlife/DSC_2948.JPEG"> </div>
@@ -135,7 +54,7 @@ img {
   
   <a class="prev" onclick="plusSlides(-1, 1)">&#9668;</a>
   <a class="next" onclick="plusSlides(1, 1)">&#9654;</a>
-  <a class="top" href="#slideshow1">&#9650;</a>
+  <!-- <a class="top" href="#slideshow1">&#9650;</a> -->
 </div>
 
 <script>
