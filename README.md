@@ -3,11 +3,13 @@ title: Site de photographie
 author: Gabriel
 ---
 
-Un petit site statique en HTML/CSS/JS, sans prétention pour:
+[https://gabrielgodefroy.github.io/photographie/](https://gabrielgodefroy.github.io/photographie/)
 
- * apprendre HTML/CSS
- * exposer mes photos
- * partager des astuces
+Un petit site statique en HTML/CSS/JS afin:
+
+ * d'apprendre HTML/CSS,
+ * d'exposer mes photos,
+ * de partager des astuces.
 
 Note:
 
