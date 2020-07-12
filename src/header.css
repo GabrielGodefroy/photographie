@@ -1,20 +1,24 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #666699DD;
+header {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
   z-index:3;
 }
 
-li {
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #666699DD;
+  
+}
+
+header li {
   float: left;
 }
 
-li a {
+header li a {
   display: block;
   color: white;
   text-align: center;
@@ -22,10 +26,10 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+header li a:hover {
   background-color: #111;
 }
 
-.active {
+header .active {
   background-color: #6666CC99;
 }
