@@ -1,5 +1,5 @@
 
-.footer {
+footer {
 	margin:40px auto;
 	max-width:650px;
 	line-height:1.6;
@@ -10,10 +10,10 @@
   opacity: 0.3;
 }
 
-.footer a {
+footer a {
     text-decoration: none;
 	border: 0 none;
 }
-.footer img {
+footer img {
     width:36px;
 }
