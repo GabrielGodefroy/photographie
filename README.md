@@ -19,3 +19,6 @@ TODO:
 
  * nettoyer les CSS/Javascript
  * mettre du contenu dans tech.html
+ * header different dans galerie & tech...
+ * utiliser les mêmes fontes dans  galerie & tech...
+ * galerie : key event + tactile
