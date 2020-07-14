@@ -5,7 +5,7 @@ html {
 
 }
 .body {
-    padding:12px;
+    padding:16px;
     line-height: 1.6;
     font-size: 18px;
     max-width: 650px;
@@ -22,8 +22,12 @@ html {
     right:5px;
 }
 
-.lien {
+.liennodeco {
     text-decoration: none; 
+    color: #444;
+}
+
+.lien {
     color: #444;
 }
 

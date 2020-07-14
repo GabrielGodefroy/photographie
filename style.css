@@ -7,7 +7,11 @@ body, html {
 
 .background {
   /* The image used */
-  background-image: url("DSC_0661.JPEG");
+  /*background-image: url("DSC_0661.JPEG");
+	background-image: url("DSC_0689.JPEG");
+*/
+	background-image: url("DEV1_05.JPEG");
+    opacity:1.;
 
   /* Full height */
   height: 100%; 
