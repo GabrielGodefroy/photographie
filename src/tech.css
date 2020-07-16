@@ -40,16 +40,20 @@ html {
     background-color:#6666CC99;
 }
 
+br {
+    content: " ";
+    display: block;
+    margin: 15px 0;
+ }
+
 .bash {
  padding:8px;
  font-size: 15px;
  background-color: black;
  color: #99d15c;
  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+ line-height: 1.0;
+ white-space: pre
 }
 
-br {
-    content: " ";
-    display: block;
-    margin: 15px 0;
- }
+ 
