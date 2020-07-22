@@ -21,103 +21,191 @@
 	<div class="body">
 		<h1> Créer et partager ses timelapses </h1>
 		
-		Confiné, le début de l'année 2020 à été l'occasion pour moi 
-		de m'essayer à de techniques : photo macro, culinaires, et timelapses.
-		Réaliser des timelapse prend du temps ; ça tombe bien, dernièrement, 
-		le temps, ce n'est pas ce qui manque.
+		Confiné, le début de l'année 2020 à été l'occasion 
+		de s'essayer à de nouvelles techniques, dont la timelapse.
+		
 		<br>
 
-		Une timelapse consiste à filmer un sujet en mouvement en diminuant 
-		la cadence de prise de vues pour que le mouvement du sujet semble accéléré 
-		lors de la visualisation. Il est donc important de choisir un sujet en mouvement.
-		Ici, je choisis le ciel lors d'un coucher de soleil, vu depuis la fénêtre de l'appartement.
-		<br>
+		Une timelapse permet de donner l'impression d'accélerer le mouvement du sujet photographier.
+		Pour cela, on diminue la cadence de prise de vues pour que par rapport à un film classique.
 		
-		Dans ce tuto, je reviens sur la prise de vue, le post processing et l'export pour obtenir 
+		<br>
+		Créer une timelapse prend donc du temps ; ça tombe bien,
+		le temps ce n'est pas ce qui manque dernièrement.
+		Dans ce tuto, je reviens sur la prise de vue, le post processing et les exports nécessaires pour obtenir 
 		la vidéo ci-dessous : 
 		<br>
 
-		<video width=100% autoplay controls>
-			<source src="photo/tech-timelapse/output-HD-whatsapp.mp4" type="video/mp4">
-			<!--<source src="movie.ogg" type="video/ogg"> -->
+		<video width=100% autoplay controls loop>
+			<source src="photo/techTimelapse/output-whatsapp.mp4" type="video/mp4">
+			<source src="photo/techTimelapse/output-whatsapp.mov" type="video/mov">
 		  Your browser does not support the video tag.
 		  </video>		
 		  <br>
-		<i>C'est pas mal ton truc Gabriel, mon comment k'on fait ? </i>
+		<i>C'est pas mal ton truc Gabriel, mais     comment k'on fait ? </i>
 		
 		<br>
-		J'y arrive, petit impatient. Pour commencer, et après avoir recharger ta batterie, il te faut sortir ton appareil photo pour : 
+		J'y arrive, petit impatient. 
 		
 		<h2> La prise de vue !</h2>
+
+		Pour commencer, et après avoir recharger ta batterie, il te faut sortir ton appareil 
+		photo pour la prise de vue. Le ciel, une rivière, une foule ou un chantier peuvent faire de bons sujets. 
+		Une fois le sujet selectionné, pense à bien composer ton image et stabilise ton appareil photo. 
+		Un muret peut faire l'affaire, mais un trépied et plus que recommandé ici. 
+		Pour éviter les tremblements désagréables,
+		choisis un trépied lourd, notamment s'il y a du vent. Finalement, effectue tes réglages
+		en mode manuel, puis désactive l'autofocus. 
 		
-		Première étape, la prise de vue. Le ciel, une rivière, ou un bateau qui sort 
-		d'un port peuvent faire de bons sujets. Une foule arrivant sur un lieu, ou un chantier également.
-		Une fois le sujet selectionné, penser à bien composer votre image.
-		Enfin, fixé votre appareil photo. Un muret peut faire l'affaire, mais un trépied et 
-		plus que recommandé ici. Pour éviter les tremblements désagréables, choisir un trépied 
-		lourd, notamment s'il y a du vent.
 		<br>
-		  Fais tes réglages. Fully automatic et absences de auto focus.
-		<br>
-		Une fois installé, il fault calculer le nombre de photos à prendre.
+		Une fois installé, il faut calculer le nombre de photos à prendre.
 		Idéalement, 24 photos par secondes de vidéos sont nécessaires. 
 		Pour une timelapse à partager avec la famille sur whatsapp, 
 		je trouve qu'une vidéo de 5 à 15 secondes constitue un bon format.
-		Ici ma vidéo dure 5 secondes, il vous faudra donc 5x24=120 images.
-
-		<br>
+		Ici ma vidéo dure 5 secondes, il m'a donc fallu 5x24=120 images.
 		Il est tout à fait possible de faire   
 		<a class="lien" href="https://www.youtube.com/watch?v=AHrCI9eSJGQ&t=10s"> des timelapses bien plus longues</a>.
-		mais cela demande une certaine 	patience.
+		mais cela demande de la patience, des cartes SD et un ordinateur puissant.
+		<br>
+		
 		<br>
 
-		Vous pouvez maintenant diviser la durée du phénomène que vous prenez en photos
-		par votre nombre d'image. Pour 120 photos reparti sur 15 minutes de coucher de soleil,
-		je réalise une prise de vue toutes les 15 seconde. 
+		Tu peux maintenant diviser la durée du phénomène que tu vas prendre en photos
+		par ton nombre d'images. Pour 120 photos reparti sur 20 minutes de coucher de soleil,
+		je réalise une prise de vue toutes les 10 secondes. 
 		Si les mathématiques ne sont pas ton truc, utilise le petit calculateur ci-dessous:
 		  <br>
 
-		  https://www.christersvensson.com/calculator/
-		TODO
-		  <br>
+
+		<table style="background-color: #c0a9e4;      margin-left:auto; 
+				  margin-right:auto;">
+			<tr>
+				<td><label for="duree_s">Durée de la vidéo (en secondes) </label> </td>
+				<td> <input type="number" id="duree_s" name="duree_s" value="5" min="1" max="60" step="1" onchange="update()"></td>
+			</tr>
+			<tr>
+				<td><label for="duree_min">Durée du phénomème (en minutes) </label> </td>
+				<td><input type="number" id="duree_min" name="duree_min" value="20" min="1" max="600" step="1" onchange="update()"> </td>
+			</tr>
+			<tr>
+				<td><label for="nb_img_per_s">Nombre d'images par seconde </label> </td>
+				<td><input type="number" id="nb_img_per_s" name="nb_img_per_s" value="24" min="1" max="60" step="1" onchange="update()"> </td>
+			</tr>
+			<tr>
+				
+				<th><label for="nb_img_tot"> Nombre total d'images </label> </th>
+				<th><input type="number" id="nb_img_tot" name="nb_img_tot" value="24" min="1" max="60" disabled="disabled"> </th>
+			</tr>
+			<tr>
+				<th><label for="delai_s"> Delai entre prises de vue (seconde)</label> </th>
+				<th><input type="number" id="delai_s" name="delai_s" value="24" min="1" max="60" disabled="disabled"> </th>
+			</tr>
+		</table>
+
+		<script>
+			function update() {
+				duree_s      = document.getElementById("duree_s").value;
+				duree_min    = document.getElementById("duree_min").value;
+				nb_img_per_s = document.getElementById("nb_img_per_s").value;
+
+				nb_img_tot = duree_s * nb_img_per_s;
+				delai_s    = duree_min * 60 / nb_img_tot;
+
+				document.getElementById('nb_img_tot').value = nb_img_tot;
+				document.getElementById('delai_s').value =  Math.round(delai_s);
+			}
+		update()
+		</script>
+  	  <br>
 
 
-		Enfin, j'espère que tu as des vétements adaptés, à boire et à manger, parce qu'il 
-		te faut maintenant appuyer sur ton déclencheur toutes les 30 secondes... 
+		Enfin, j'espère que tu as des vêtements adaptés, à boire et à manger, parce qu'il 
+		te faut maintenant appuyer sur ton déclencheur toutes les 10 secondes... 
 		Je plaisante, ne fais pas ça ! Cela introduirait du mouvement dans ta caméra. 
 		C'est donc le moment d'utiliser le mode <i> interval time shooting </i>.
 		Sur mon Nikon D5200, je peux y sélectionner l'heure de début des prises de vue,
-		le nombre de prises de vue et l'interval en minutes et secondes.
+		le nombre de prises de vue et l'interval en minutes et secondes : <br>
 
-
-
-
-
-
-
-		<h2> Le post-processing (darktable) </h2>
-
-		<h2> La conversion (ffmpeg) </h2>
-
-		<div class="bash"> echo > listpng.txt; <br>
-			for img in `ls *.jpg ; ls *.jpg | sort -r ` ; 
-			do 
-				echo file \'$img\' >> listpng.txt ; <!--echo duration 0.2>> listpng.txt ; -->
-			done ; <br>
-			ffmpeg    -f concat -i "listpng.txt" -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p -s hd1080 output-whatsapp.mp4 <!-- TODO, vérifier les dimensions -->
+		<div style="text-align: center;">
+			<img src="photo/techTimelapse/interval01.JPEG" style="max-width:40%;" alt="interval01">
+			<img src="photo/techTimelapse/interval02.JPEG" style="max-width:40%;" alt="interval02">
 		</div>
 
-		<h2> Ressources utilisées </h2>
+		Bien joué, tu viens de remplit ta carte SD de photos qu'il te faut maintenir convertir en film !
+		<h2> Le post-processing (darktable) </h2>
+
+		Si tu as shooté en <i> RAW </i>, il te faut convertir tes images en JPG (et sinon, tu peux passer directement à la section suivante).
+		Sur <i> darktable</i>, je process l'une des images puis j'utilise la fonctionnalités 
+		permettant de copier / coller la pile de modification pour l'appliquer à l'ensemble des photos. 
+		Enfin, j'exporte l'ensemble au format JPG comme indiqué ci-dessous.
+
+		<div style="text-align: center;">
+			<img src="photo/techTimelapse/ApplyAll.png" style="max-width:99%;" alt="interval01">
+			<img src="photo/techTimelapse/ApplyAllZoom.png" style="max-width:70%;" alt="interval02">
+			<img src="photo/techTimelapse/export.png" style="max-width:70%;" alt="export">
+		</div>
+
+		<h2> La conversion (ffmpeg) </h2>
+		
+		Finalement, il est temps de convertir ces images en un petit filme. Pour cela, j'utilise <i> ffmpeg </i>
+		de la manière suivante : dans un premier temps, je crée un fichier contenant le nom de chaque image,
+		via la commands <i> ls </i>. Ici, je la couple avec <i>sort -r</i> pour faire passer 
+		la vidéo dans un sens puis l'autre.
+
+<p class="bash"> 
+echo > listJPG.txt; # Creation d'un fichier vide <br>
+for img in `ls *.jpg ; ls *.jpg | sort -r ` ; # Pour chaque image... 
+	do 
+	echo file \'$img\' >> listJPG.txt ; # ajout d'une ligne   <!--echo duration 0.2>> listJPG.txt ; -->
+	done ; 
+</p>
+Enfin, je crée la vidéo avec ffmpeg
+<p class="bash"> 
+ffmpeg -f concat -i "listJPG.txt" \
+	-c:v libx264  \
+	-profile:v baseline -level 3.0 -pix_fmt yuv420p  \
+	-s hd1080  \
+	output-whatsapp.mp4 <!-- TODO, vérifier les dimensions -->
+</p>
+
+				Les options indiquées permettent d'envoyer la vidéos via whatsapp.
+
+				<h2> Et c'est parti !</h2>
+		Connecte-toi sur ta messagerie ou ton réseau social préféré, et tu peux partager la vidéo !
+
+
+		<hr>
+		<h2> Notes à moi-même, pour aller plus loin </h2>
+
+		<ul>
+			<li>Utiliser un ND filter pour rendre la vidéo plus <i>lisse</i> </li>
+			<li>Ajouter une musique pour la vidéo </li>
+		</ul>
+		
+
+		<h3> Ressources utilisées </h3>
 
 		<ul>
 			<li> <a class="lien" href="https://www.w3schools.com/html/html_formatting.asp"> Intégrer une vidéo en HTML </a>
-			<li> <a class="lien" href="https://www.youtube.com/watch?v=AHrCI9eSJGQ&t=10s"> Timelapse de 30 jours !</a>
-			<li> <a class="lien" href="https://www.dummies.com/photography/cameras/nikon-camera/how-to-use-interval-time-shooting-on-your-nikon-d5300/"> Nikon, interval time shooting</a>
-				
+			<li> <a class="lien" href="https://www.youtube.com/watch?v=AHrCI9eSJGQ&t=10s"> Timelapse de 30 jours</a>
+			<li> <a class="lien"
+					href="https://www.dummies.com/photography/cameras/nikon-camera/how-to-use-interval-time-shooting-on-your-nikon-d5300/">
+					Nikon, interval time shooting</a>
+			
+			<li> <a class="lien" href="https://www.youtube.com/watch?v=0PUM5AaNaME">
+					Griffin Hammond: How to shoot a timelapse </a>
+			<li> <a class="lien" href="https://www.youtube.com/watch?v=eul7PoGJarg">
+					Griffin Hammond: How to edit a timelapse (in Final Cut Pro X) </a>
+			
+			<li> <a class="lien" href="https://www.gravitywell.co.uk/insights/timelapse-video-generation-with-ffmpeg/">
+					Timelapse video generation with FFmpeg
+				</a>
+			<li> <a class="lien" href="https://gist.github.com/jaydenseric/220c785d6289bcfd7366">
+					Video conversion with FFmpeg
+				</a>
 		</ul>
 
-
-
+		<div style="position:relative;text-align:right; color:grey">	Dernière mise à jour : 22 juillet 2020 <div>
 
 		</div>
 </body>
