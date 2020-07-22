@@ -26,8 +26,8 @@
 		
 		<br>
 
-		Une timelapse permet de donner l'impression d'accélerer le mouvement du sujet photographier.
-		Pour cela, on diminue la cadence de prise de vues pour que par rapport à un film classique.
+		Une timelapse permet de donner l'impression d'accélerer le mouvement du sujet photographié.
+		Pour cela, on diminue la cadence de prise de vues par rapport à un film classique.
 		
 		<br>
 		Créer une timelapse prend donc du temps ; ça tombe bien,
@@ -49,7 +49,7 @@
 		
 		<h2> La prise de vue !</h2>
 
-		Pour commencer, et après avoir recharger ta batterie, il te faut sortir ton appareil 
+		Pour commencer, et après avoir rechargé ta batterie, il te faut sortir ton appareil 
 		photo pour la prise de vue. Le ciel, une rivière, une foule ou un chantier peuvent faire de bons sujets. 
 		Une fois le sujet selectionné, pense à bien composer ton image et stabilise ton appareil photo. 
 		Un muret peut faire l'affaire, mais un trépied et plus que recommandé ici. 
@@ -71,7 +71,7 @@
 		<br>
 
 		Tu peux maintenant diviser la durée du phénomène que tu vas prendre en photos
-		par ton nombre d'images. Pour 120 photos reparti sur 20 minutes de coucher de soleil,
+		par ton nombre d'images. Pour 120 photos reparties sur 20 minutes de coucher de soleil,
 		je réalise une prise de vue toutes les 10 secondes. 
 		Si les mathématiques ne sont pas ton truc, utilise le petit calculateur ci-dessous:
 		  <br>
@@ -124,14 +124,14 @@
 		Je plaisante, ne fais pas ça ! Cela introduirait du mouvement dans ta caméra. 
 		C'est donc le moment d'utiliser le mode <i> interval time shooting </i>.
 		Sur mon Nikon D5200, je peux y sélectionner l'heure de début des prises de vue,
-		le nombre de prises de vue et l'interval en minutes et secondes : <br>
+		le nombre de prises de vue et l'intervalle en minutes et secondes : <br>
 
 		<div style="text-align: center;">
 			<img src="photo/techTimelapse/interval01.JPEG" style="max-width:40%;" alt="interval01">
 			<img src="photo/techTimelapse/interval02.JPEG" style="max-width:40%;" alt="interval02">
 		</div>
 
-		Bien joué, tu viens de remplit ta carte SD de photos qu'il te faut maintenir convertir en film !
+		Bien joué, tu viens de remplir ta carte SD de photos qu'il te faut maintenir convertir en film !
 		<h2> Le post-processing (darktable) </h2>
 
 		Si tu as shooté en <i> RAW </i>, il te faut convertir tes images en JPG (et sinon, tu peux passer directement à la section suivante).
@@ -147,7 +147,7 @@
 
 		<h2> La conversion (ffmpeg) </h2>
 		
-		Finalement, il est temps de convertir ces images en un petit filme. Pour cela, j'utilise <i> ffmpeg </i>
+		Finalement, il est temps de convertir ces images en un petit film. Pour cela, j'utilise <i> ffmpeg </i>
 		de la manière suivante : dans un premier temps, je crée un fichier contenant le nom de chaque image,
 		via la commands <i> ls </i>. Ici, je la couple avec <i>sort -r</i> pour faire passer 
 		la vidéo dans un sens puis l'autre.
@@ -205,7 +205,7 @@ ffmpeg -f concat -i "listJPG.txt" \
 				</a>
 		</ul>
 
-		<div style="position:relative;text-align:right; color:grey">	Dernière mise à jour : 22 juillet 2020 <div>
+		<div style="position:relative;text-align:right; color:lightgrey">	Dernière mise à jour : 22 juillet 2020 <div>
 
 		</div>
 </body>
