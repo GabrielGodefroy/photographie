@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> TODO </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="header.css">
+	<link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="tech.css">
+    
+
+    <style>     
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 3rem;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+  
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+ }
+
+.basic-grid {
+    display: grid;
+    gap: 1rem;
+
+    /* 1 too skinny, too much code */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  
+    /* 2 cleaner code */
+    /* grid-template-columns: repeat(12, 1fr); */
+  
+    /* 3  better sizing, but overflows */
+    /* grid-template-columns: repeat(12, minmax(240px, 1fr)); */
+  
+    /* 4 final */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+ }
+
+    </style>
+</head>
+
+<header>
+	<ul>
+		<li><a class="active" href="../index.html">Home</a></li>
+		<li><a href="galerie.html"> Galerie</a></li>
+		<li><a href="tech.html">Tech</a></li>
+	</ul>
+</header>
+
+
+<body>
+    
+    
+    <div class="body">
+        <section class="basic-grid"> 
+            <div class='card'> Coquille vide sur l'utilisation d'un grille </div>
+            <div class='card'> Coquille vide sur l'utilisation d'un grille </div>
+            <div class='card'> Coquille vide sur l'utilisation d'un grille </div>
+            <div class='card'> Coquille vide sur l'utilisation d'un grille </div>
+        </section>
+
+		<h3> Ressources utilisées </h3>
+
+		<ul>
+            <li> <a class="lien" href="TODO"> TODO </a>
+                
+                https://www.youtube.com/watch?v=N3AkSS5hXMA
+                br
+                https://www.youtube.com/watch?v=JPT3bFIwJYA
+
+		</ul>
+
+		<div style="position:relative;text-align:right; color:lightgrey">	Dernière mise à jour : 28 juillet 2020 <div>
+
+		</div>
+</body>
+
+<footer>
+	<hr>
+	Gabriel Godefroy
+	<a href="https://www.instagram.com/gabrielisoninsta/"> <img src="logo/insta.png" alt="Instagram" /> </a>
+	<a href="https://www.flickr.com/photos/164376539@N03"> <img src="logo/flickr.png" alt="Flickr" /> </a>
+	<a href="https://gabrielgodefroy.github.io"> <img src="logo/homepage.png" alt="gabrielgodefroy.html"> </a>
+</footer>
+
+
+</html>
