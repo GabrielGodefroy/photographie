@@ -26,9 +26,10 @@
         
 		Les expositions longues sont à la mode ces dernières années. On aime ou 
 		on n'aime pas les expositions... Certainement, l'aspect n'est pas le plus naturel 
-		et il est possible de trouver l'effet surfait. Personnelement, je trouve
-		ça très esthétique. Je trouve également gratifiant de <i>créer</i> une image qui soit différente 
-		de la réalité ! J'aime aussi la sérénité qui s'en dégage.
+		et l'image peut paraître surfaite. Personnelement, je trouve
+		ça très esthétique. J'aime aussi la sérénité qui s'en dégage. 
+		Je trouve également gratifiant de <i>créer</i> une image qui soit différente 
+		de la réalité ! 
         <br>
 		Réaliser une <i>vraie</i> longue exposition nécessite une faible luminosité. Cela
 		peut s'obtenir en se levant tôt, en se couchant tard et/ou en utilisant des filtres (ND filter).
@@ -38,19 +39,19 @@
 		<img width=100% src="photo/scot/DSC_0312_01.JPEG">
 		<br>
 		
-		Si tu n'as pas de filtres et que tu n'es pas une lève tôt, il est possible de tricher.
+		Si tu n'as pas de filtres et que tu n'es pas un(e) lève tôt, il est possible de 
+		créer une longue exposition en post-processing.
 		Dans ce post, j'explique comment obtenir l'effet longue exposition ci-dessous en traitant
-		une pile d'image avec <a class="lien" href="https://imagemagick.org/index.php"> imagemagick </a> :
+		une pile d'image avec <a class="lien" href="https://imagemagick.org/index.php"> imagemagick</a>&nbsp;:
 		<br>
 		<img width=100% src="photo/techLongExpo/SimulatedLongExposureFINAL.JPG">
 		<br>
 		
         <h2> Prise de vues </h2>
 		S'il y a trop de lumière pour réaliser une exposition de N secondes ou plus, il est possible de 
-		souvent possible de réaliser N expositions d'environ 1 seconde, puis de les associer en post-processing.
-		Comme pour la réalisation de timelapse,
-		je réalise une succession d'image. Pour cela, j'utilise un trépied, des réglages manuels, désactive l'autofocus
-		puis utilise l'intervalomètre integré à mon Nikon D5200. Les techniques de prise de vue et de processing sont très similaires
+		souvent possible de réaliser N expositions (aussi longue que possible), puis de les associer en post-processing.
+		Pour cela, je réalise une succession d'image. J'utilise un trépied, des réglages manuels, désactive l'autofocus
+		puis utilise l'intervalomètre intégré à mon Nikon D5200. Les techniques de prise de vue et de processing sont très similaires
 		à celles utilisées pour les timelapses, <a class="lien" href="tech-timelapse.html">regarde le billet consacré </a> pour plus de détails. <br>
 		
 		<video width=100% autoplay controls loop>
@@ -60,11 +61,12 @@
 		  </video>		
 		<br>
 
-		Ce coucher de soleil n'a rien de fantastique. Ce que j'aime bien avec cette technique, c'est qu'elle va permettre
-		de transformer un scène banale et une photo beaucoup plus graphique.
+		Ce coucher de soleil n'a rien de fantastique. 
+		Une longue exposition peut
+		transformer un scène banale et une photo beaucoup plus graphique.
 
-		Une fois ces photos transférées sur l'ordinateur, je commence par utiliser la fonction <i>average</i> d'imagemagick pour avoir
-		une idée du rendue :<br>
+		Une fois ces photos transférées sur l'ordinateur, j'utilise la fonction 
+		<i>average</i> (moyenne) d'imagemagick pour avoir une idée du rendu&nbsp;:<br>
 
 		<p class="bash"> 
 convert -average *.JPG SimulatedTimelapseInit.JPG
@@ -78,33 +80,31 @@ convert -average *.JPG SimulatedTimelapseInit.JPG
 		<h2> Post-processing</h2>
 		
 		L'image obtenue ressemble clairement à une longue exposition... Elle est aussi triste et fade ! 
-		Les détails sont perdus dans le noir de la groyne et l'image est un dégradé de gris.
+		Les détails sont perdus dans le noir de la structure en bois et l'image est un dégradé de gris.
 
 		<br>
 
-		Pour y remedier, je charge l'ensemble des images dans darktable, et je développe la première. J'augmente
-		la contraste, fait varier la luminosité avec différents masques, augmente les saturations, ajuste le cadrage etc.
-		Cela me permet d'obenir l'image ci-dessous, bien plus coloré : 
+		Pour y remédier, je charge l'ensemble des images dans darktable, et je développe la première. J'augmente
+		le contraste, fait varier la luminosité avec différents masques, augmente les saturations, ajuste le cadrage etc.
+		Cela me permet d'obtenir l'image ci-dessous, bien plus colorée&nbsp;: 
 		<br>
 		<img width=100% src="photo/techLongExpo/overlaid.gif">
 
 		Je duplique le processing à l'ensemble des images que j'exporte ensuite. J'appelle de nouveau 
-		la commande image magick pour obtenir cette image : 
+		la commande imagemagick pour obtenir cette image&nbsp;	: 
 		<br>
 
 		<img width=100% src="photo/techLongExpo/SimulatedLongExposure65.JPG">
 
 
-		<h2> Jouer avec la durée d'exposition <h2>
-
-			TODO
-
+		<h2> Pour aller plus loin </h2>
+		Cette technique permet également (une fois rentré au chaud) de modifier 
+		virtuellement la durée de l'exposition. Dans un prochain billet, je 
+		montrerai comment on combiner différentes images pour sélectivement limiter
+		le flou de bougé.
+		<br>
 		<!-- for img in 1 2 3 4 5 10 15 25 35 45 55 65 ; do convert -font helvetica -pointsize 120 -fill "#6666CC" -draw "text 40,150 'Moyenne sur $img' text 360,280 'image(s)' " SimulatedLongExposure$img.JPG $img.jpg; done-->
 		<img width=100% src="photo/techLongExpo/anim.gif">
-
-		TODO
-
-		<img width=100% src="photo/techLongExpo/SimulatedLongExposureFINAL.JPG">
 
 		
 
@@ -112,15 +112,16 @@ convert -average *.JPG SimulatedTimelapseInit.JPG
 		<h3> Ressources utilisées </h3>
 
 		<ul>
-            <li> <a class="lien" href="TODO"> TODO </a>
-                
-                https://www.youtube.com/watch?v=N3AkSS5hXMA
+			<li> <a class="lien" href="https://inphotos.org/2015/06/19/long-exposure-photography-through-stacking/"> 
+			Long Exposure Photography through Stacking </a>
+
+                <!--https://www.youtube.com/watch?v=N3AkSS5hXMA
                 br
-                https://www.youtube.com/watch?v=JPT3bFIwJYA
+                https://www.youtube.com/watch?v=JPT3bFIwJYA-->
 
 		</ul>
 
-		<div style="position:relative;text-align:right; color:lightgrey">	Dernière mise à jour : 22 juillet 2020 <div>
+		<div style="position:relative;text-align:right; color:lightgrey">	Dernière mise à jour : 30 juillet 2020 <div>
 
 		</div>
 </body>
