@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> TODO </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="header.css">
+	<link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="tech.css">
+    
+    <style>     
+
+
+.basic-grid {
+    display: grid;
+    gap: 1rem;
+
+    /* 1 too skinny, too much code */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  
+    /* 2 cleaner code */
+    /* grid-template-columns: repeat(12, 1fr); */
+  
+    /* 3  better sizing, but overflows */
+    /* grid-template-columns: repeat(12, minmax(240px, 1fr)); */
+  
+    /* 4 final */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+ }
+ 
+ .photo-grid {
+  display: grid;
+  gap: 1rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+}
+
+/* Medium screens */
+@media screen and (min-width: 600px) {
+  .card-tall {
+    grid-row: span 2 / auto;
+  }
+
+  .card-wide {
+    grid-column: span 2 / auto;
+  }
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 3rem;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    transition: all 500ms;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+  
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+ }
+    </style>
+</head>
+
+<header>
+	<ul>
+		<li><a class="active" href="../index.html">Home</a></li>
+		<li><a href="galerie.html"> Galerie</a></li>
+		<li><a href="tech.html">Tech</a></li>
+	</ul>
+</header>
+
+
+    TODO, est-ce que chaque carte pourrait-être une galerie ?
+
+    <section class="photo-grid"> 
+        <div
+        class="card card-tall card-wide"
+        style="background-image:url('https://images.unsplash.com/photo-1558981359-219d6364c9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')"
+      >
+        1
+      </div>
+      <div
+        class="card card-tall"
+        style="background-image:url('https://images.unsplash.com/photo-1583585635793-0e1894c169bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=913&q=80')"
+      >
+        2
+      </div>
+      <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583531172005-814191b8b6c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80')"
+      >
+        3
+      </div>
+      <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583426573939-97d09302d76a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')"
+      >
+        4
+      </div>
+      <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583532452513-a02186582ccd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')"
+      >
+        5
+      </div>
+      <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583445013765-46c20c4a6772?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')"
+      >
+        6
+      </div>
+      <div
+        class="card card-wide"
+        style="background-image:url('https://images.unsplash.com/photo-1583562835057-a62d1beffbf3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=949&q=80')"
+      >
+        7
+      </div>
+      <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583483425010-c566431a7710?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80')"
+      >
+        8
+      </div>
+      <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583500557349-fb5238f8d946?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80')"
+      >
+        9
+      </div>
+      <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583468323330-9032ad490fed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80')"
+      >
+        10
+      </div>
+      <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583425423320-2386622cd2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80')"
+      >
+        11
+      </div>
+      <div
+        class="card"
+        style="background-image:url('https://images.unsplash.com/photo-1583518257225-f9a8081f6a84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')"
+      >
+        12
+      </div>
+
+
+    </section>
+
+<body>
+    
+    
+    <div class="body">
+        <section class="basic-grid"> 
+            <div class='linkbox'> Coquille vide sur l'utilisation d'un grille </div>
+            <div class='linkbox'> Coquille vide sur l'utilisation d'un grille </div>
+            <div class='linkbox'> Coquille vide sur l'utilisation d'un grille </div>
+            <div class='linkbox'> Coquille vide sur l'utilisation d'un grille </div>
+        </section>
+
+		<h3> Ressources utilisées </h3>
+
+		<ul>
+            <li> <a class="lien" href="TODO"> TODO </a>
+                
+                https://www.youtube.com/watch?v=N3AkSS5hXMA
+                br
+                https://www.youtube.com/watch?v=JPT3bFIwJYA
+
+		</ul>
+
+		<div style="position:relative;text-align:right; color:lightgrey">	Dernière mise à jour : 28 juillet 2020 <div>
+
+		</div>
+</body>
+
+<footer>
+	<hr>
+	Gabriel Godefroy
+	<a href="https://www.instagram.com/gabrielisoninsta/"> <img src="logo/insta.png" alt="Instagram" /> </a>
+	<a href="https://www.flickr.com/photos/164376539@N03"> <img src="logo/flickr.png" alt="Flickr" /> </a>
+	<a href="https://gabrielgodefroy.github.io"> <img src="logo/homepage.png" alt="gabrielgodefroy.html"> </a>
+</footer>
+
+
+</html>
