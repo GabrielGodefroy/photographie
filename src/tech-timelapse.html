@@ -165,6 +165,7 @@ ffmpeg -f concat -i "listJPG.txt" \
 	-c:v libx264  \
 	-profile:v baseline -level 3.0 -pix_fmt yuv420p  \
 	-s hd1080  \
+	-filter:v "setpts=1*PTS" <!-- to speed or slow down things --> \
 	output-whatsapp.mp4 <!-- TODO, vérifier les dimensions -->
 </p>
 
